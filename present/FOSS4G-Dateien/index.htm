@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--Edit the title of the page-->
+    <title>PLUTO Data Tour</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="index_data/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="index_data/cartodb.css">
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <!--Switch between the different themes changing the stylesheet below - light-theme.css |dark-theme.css -->
+    <link rel="stylesheet" href="index_data/pluto-theme.css">
+    <link rel="stylesheet" href="index_data/makeitresponsive.css">
+    <style>
+      div.cartodb-tiles-loader{
+        position: absolute;
+        left: 43px;
+        top: -10px;
+
+      }
+    </style>
+  <style></style><script src="index_data/analytics.js" async=""></script><script src="index_data/commonutilstats.js" charset="UTF-8" type="text/javascript"></script><script src="index_data/AuthenticationService.Authenticate" charset="UTF-8" type="text/javascript"></script></head>
+  <body>
+
+    <div tabindex="0" class="map leaflet-container leaflet-fade-anim" id="map"><div style="transform: translate(0px, 0px);" class="leaflet-map-pane"><div class="leaflet-tile-pane"><div style="opacity: 0.99;" class="leaflet-layer"><div class="leaflet-tile-container leaflet-zoom-animated"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img src="index_data/6156.png" style="height: 256px; width: 256px; transform: translate(32px, 128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6156_003.png" style="height: 256px; width: 256px; transform: translate(288px, 128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6157.png" style="height: 256px; width: 256px; transform: translate(32px, 384px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6157_003.png" style="height: 256px; width: 256px; transform: translate(288px, 384px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6155_002.png" style="height: 256px; width: 256px; transform: translate(32px, -128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6155_003.png" style="height: 256px; width: 256px; transform: translate(288px, -128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6156_004.png" style="height: 256px; width: 256px; transform: translate(-224px, 128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6156_002.png" style="height: 256px; width: 256px; transform: translate(544px, 128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6157_004.png" style="height: 256px; width: 256px; transform: translate(-224px, 384px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6157_002.png" style="height: 256px; width: 256px; transform: translate(544px, 384px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6158_004.png" style="height: 256px; width: 256px; transform: translate(32px, 640px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6158_003.png" style="height: 256px; width: 256px; transform: translate(288px, 640px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6155_004.png" style="height: 256px; width: 256px; transform: translate(-224px, -128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6155.png" style="height: 256px; width: 256px; transform: translate(544px, -128px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6158.png" style="height: 256px; width: 256px; transform: translate(-224px, 640px);" class="leaflet-tile leaflet-tile-loaded"><img src="index_data/6158_002.png" style="height: 256px; width: 256px; transform: translate(544px, 640px);" class="leaflet-tile leaflet-tile-loaded"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a title="Zoom in" href="#" class="leaflet-control-zoom-in">+</a><a title="Zoom out" href="#" class="leaflet-control-zoom-out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | CartoDB <a href="http://cartodb.com/attributions" target="_blank">attribution</a></div></div></div><div style="opacity: 0;" class="cartodb-tiles-loader"><div class="loader"></div></div><div style="display: none;" class="cartodb-infowindow"><div class="cartodb-popup">
+  <a href="#close" class="cartodb-popup-close-button close">x</a>
+  <div class="cartodb-popup-content-wrapper">
+    <div style="" class="cartodb-popup-content">
+    </div>
+  </div>
+  <div class="cartodb-popup-tip-container"></div>
+</div>
+</div><div style="display: none;" class="cartodb-legend-stack"></div><div style="position:absolute; bottom:0; left:0; display:block; border:none; z-index:1000000;" class="cartodb-logo"><a href="http://www.cartodb.com/" target="_blank"><img src="index_data/new_logo.png" style="position:absolute; bottom:8px; left:8px; display:block; width:71px!important; height:29px!important; border:none; outline:none;" alt="CartoDB" title="CartoDB" height="29" width="71"></a></div></div>
+
+    <div class="sidepanel">
+      <div class="wrapper">
+        <div class="context subheader">
+          <p>maps created by <a href="http://twitter.com/andrewxhill">@andrewxhill</a> on <a href="http://cartodb.com/">cartodb</a></p>
+        </div>
+        <h1 id="headline">Assuming # floors = height of building</h1>
+        <div id="info"><p>How tall is the skyline of New York City? Here you can see all the peaks and valleys of the city. </p></div>
+        <div class="context footer">
+        </div>
+      </div>
+      <div id="back-button">
+        <a id="back">back</a><p></p>
+      </div>
+      <div id="next-button">
+        <a id="next">next</a><p></p>
+      </div>
+    </div>
+
+    <script src="index_data/js"></script><script src="index_data/main.js" type="text/javascript"></script>
+    <script src="index_data/cartodb.js"></script>
+    <!--Change the URL below in order to change the map that is being shown.
+    Go to your map in CartoDB, click on share, and copy the URL undert the API section
+    Check the cartodb.js documentation for more info
+    http://developers.cartodb.com/documentation/cartodb-js.html-->
+    <script type="text/javascript">
+      var last = 0;
+      var next = 0;
+      var pause = 45000;
+      var map = new L.Map('map', {
+        center: [40.73906330729812, -73.90],
+        zoom: 11,
+        minZoom: 8,
+        maxZoom: 15
+      });
+      var nextTimer;
+      var running = false;
+      var loader = new cdb.geo.ui.TilesLoader({ template: function(){ return '<div class="loader"></div>' } });
+      $('#map').append(loader.render().el);
+
+      var move = function(){
+        if(tour[last]){
+            if (tour[last]['layer']){
+                tour[last]['layer'].hide()
+            }
+            if (tour[next].xy != tour[last].xy){
+                map.panTo(tour[next].xy)
+            }
+            if (tour[next].z != map.getZoom()){
+                map.setZoom(tour[next].z)
+            }
+        }
+
+        $('#headline').html(tour[next].headline);
+        $('#info').html(tour[next].info);
+
+        window.location.hash = "#"+next;  
+
+        function addLoader(layer) {
+          layer.bind('loading', function() { loader.show() });
+          layer.bind('load',  function() { loader.hide(); });
+        }
+
+
+        if (tour[next]['layer']){
+            tour[next]['layer'].show()
+            last = next;
+            next+=1;
+            if (next == tour.length) next = 0;
+            nextTimer = setTimeout(move, pause);
+        } else {
+            cartodb.createLayer(map, tour[next].viz)
+                .addTo(map)
+                .on('done', function(layer) {
+                    addLoader(layer);
+                    // console.log(viz)
+                    // console.log(viz.getSubLayer(0))
+                    if (tour[next].options){
+                        if (tour[next].options[0].sql){
+                            layer.setQuery(tour[next].options[0].sql)
+                        }
+                        if (tour[next].options[0].cartocss){
+                            layer.setCartoCSS(tour[next].options[0].cartocss)
+                        }
+                    }
+                    tour[next]['layer'] = layer;
+                    last = next;
+                    next+=1;
+                    if (next == tour.length) next = 0;
+                    nextTimer = setTimeout(move, pause);
+                })
+                .on('error',function(){        
+                    last = next;
+                    next+=1;
+                    if (next == tour.length) next = 0;
+                    nextTimer = setTimeout(move, 100);
+                });
+        }
+      }
+
+      var tour = [
+        {
+            headline: "<i>Epic win for NYC’s Open Data Community! PLUTO is free!</i>", 
+            info: "<p>Many thanks to advocates inside and outside who worked tirelessly for years to liberate one of New York City’s most fundamental datasets. Many more thanks to the efforts of Department of City Planning, DoITT, and the Chief Analytics Officer’s office. THANK YOU!</p><p class='source'>- <a href='http://codeforamerica.org/2013/07/25/epic-win-for-nycs-open-data-community-pluto-is-free/' target='_blank'>CodeForAmerica.org</a></p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/517e4222-fe11-11e2-b27e-6d88d9497914/viz.json", 
+            id: 1,
+            xy: [40.73906330729812, -73.90],
+            z: 11
+        },
+
+        {
+            headline: "What <i>is</i> PLUTO data exactly?", 
+            info: "<p>The PLUTO dataset contains tax lot level data from the NYC Department of Finance Tax Map. It contains land use and geographic data about our city's five boroughs</p><p>As of today, the dataset contains <b>857,879</b> tax lots across New York City. <b>And many beautiful errors</b></p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/728ea6bc-fe18-11e2-bc24-e7fa850f135c/viz.json", 
+            id: 1,
+            xy: [40.73906330729812, -73.90],
+            z: 11
+        },
+
+        {
+            headline: "Let's start digging into the geospatial profile of NYC", 
+            info: "<p>On the surface, PLUTO let's us look at simple characteristics of our city. For example, how much land in each borough is <i>City Owned</i>?</p><p>In this map, we can see city owned land throughout NYC. In total, it is about <b>150 square kilometers</b></p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/3cb7238a-fe1c-11e2-98df-152134ef8509/viz.json", 
+            id: 1,
+            xy: [40.73906330729812, -73.90],
+            z: 11
+        },
+
+        {
+            headline: "Assuming # floors = height of building", 
+            info: "<p >How tall is the skyline of New York City? Here you can see all the peaks and valleys of the city. </p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/0cd08e80-fee5-11e2-8888-ddc4604a078e/viz.json", 
+            id: 1,
+            xy: [40.74059136642329, -73.964233398438],
+            z: 13
+        },
+        {
+            headline: "Assuming # floors = height of building", 
+            info: "<p >How tall is the skyline of New York City? Here you can see all the peaks and valleys of the city. </p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/bf4dacd4-003c-11e3-aaf8-a9294e572fad/viz.json", 
+            id: 1,
+            xy: [40.76401504612403, -73.97571086883545],
+            z: 14
+        },
+
+        {
+            headline: "How many residential units per tax lot?", 
+            info: "<p>In this visualization, you can take a look into how many units each tax lot contains. Of course, we can't fit all of them on a single map, but play with it online to zoom and dive into small neighborhoods.</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e92a19b4-ff03-11e2-8e44-41be34777ef9/viz.json", 
+            id: 1,
+            xy: [40.73906330729812, -73.90],
+            z: 11
+        },
+
+        {
+            headline: "How many residential units per tax lot?", 
+            info: "<p>In this visualization, you can take a look into how many units each tax lot contains. Of course, we can't fit all of them on a single map, but play with it online to zoom and dive into small neighborhoods.</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e92a19b4-ff03-11e2-8e44-41be34777ef9/viz.json", 
+            id: 1,
+            xy: [40.76401504612403, -73.97571086883545],
+            z: 14
+        },
+
+        {
+            headline: "When were current buildings of New York built?", 
+            info: "<p class='mega'>Pre-1800</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/31d417f8-fe20-11e2-a82d-df8800d887e9/viz.json", 
+            id: 1,
+            xy: [40.73906330729812, -73.90],
+            z: 11
+        },
+
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>1800-1900</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=1800][yearbuilt<1900]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>1900-1920</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=1900][yearbuilt<1920]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>1920-1940</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=1920][yearbuilt<1940]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>1940-1960</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=1940][yearbuilt<1960]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>1960-1980</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=1960][yearbuilt<1980]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>1980-2000</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=1980][yearbuilt<2000]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+        {
+            headline: "When were current buildings of lower Manhattan built?", 
+            info: "<p class='mega'>2000+</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [yearbuilt>=2000]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+
+        {
+            headline: "Who owns the private land of Manhattan?", 
+            info: "<p >By area, <b>NYU</b> is 7th of private land holders. But by total number of parcels, they are 4th.</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    // query: "SELECT * FROM mn_mappluto_13v1 WHERE ownername = 'NEW YORK UNIVERSITY'",
+                    cartocss: "#layer{polygon-fill: #ccc; [ownername='NEW YORK UNIVERSITY']{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.73006330729812, -73.99],
+            z: 15
+        },
+
+        {
+            headline: "Who owns the private land of Manhattan?", 
+            info: "<p >Three different <b>Columbia University</b> related groups (Trustees of Columbia, Columbia University, and Columbia Univ Tr City) hold a total of <b>36</b> parcels over <b>205,000 sq. meters</b>.</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    // query: "SELECT * FROM mn_mappluto_13v1 WHERE ownername = 'NEW YORK UNIVERSITY'",
+                    cartocss: "#layer{polygon-fill: #ccc; [ownername='TRUSTEES OF COLUMBIA'],[ownername='COLUMBIA UNIVERSITY'],[ownername='COLUMBIA UNIV TR CITY']{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.836330729812, -73.95],
+            z: 13
+        },
+
+        {
+            headline: "Who owns the private land of Brooklyn?", 
+            info: "<p >Funny enough, as far as land classified as <i>private</i> ownership in Brooklyn, <b>New York City</b> is the primary holder, with 166 parcels and 2.7 million square meters. Similar stories can be found in the Bronx and Staten Island.</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/09adeda4-fbb8-11e2-9ea5-15cfc813f31e/viz.json", 
+            options: [
+                {
+                    sql: "SELECT *, CASE WHEN ownername ILIKE '%CITY OF NY%' or ownername ILIKE '%CITY OF NEW%'THEN true ELSE false END is_city FROM bk_mappluto_13v1",
+                    cartocss: "#layer{polygon-fill: #ccc; [is_city=TRUE]{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.66, -73.93],
+            z: 12
+        },
+
+        {
+            headline: "Who owns the private land of Queens?", 
+            info: "<p >The story is a bit different in Queens, where the largest land owner by FAR is, <b>MTA/LIRR</b>. </p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/4a335440-fbb8-11e2-8ac4-3f21906cb20f/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: #ccc; [ownername='MTA/LIRR']{polygon-fill:red}}"
+                }
+            ],
+            id: 1,
+            xy: [40.72, -73.84],
+            z: 12
+        },
+
+        {
+            headline: "Zoning in action: Where will Brooklyn remain short?", 
+            info: "<p >Here is a large cluster of tax lots that are affected by height restrictions in the zoning laws. Probably not the best blocks for a <a href='http://nychenge.com'>Brooklynhenge</a>.</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/09adeda4-fbb8-11e2-9ea5-15cfc813f31e/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill: red; [ltdheight=null]{polygon-fill:#ccc}}"
+                }
+            ],
+            id: 1,
+            xy: [40.69, -74],
+            z: 14
+        },
+
+        {
+            headline: "Zoning in action: Don't block my view!", 
+            info: "<p>Related laws apply to this cluster of buildings along the east side of Central Park. Still, no clear pattern in where the tallest (more red) buildings are in the cluster.", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{[ numfloors <= 50.0] {polygon-fill: #B10026;}[ numfloors <= 32.0] {polygon-fill: #E31A1C;}[ numfloors <= 26.0] {polygon-fill: #FC4E2A;}[ numfloors <= 20.0] {polygon-fill: #FD8D3C;}[ numfloors <= 14.0] {polygon-fill: #FEB24C;}[ numfloors <= 8] {polygon-fill: #FED976;}[ numfloors <= 4] {polygon-fill: #FFFFB2;}[ltdheight=null]{polygon-fill:#ccc}}"
+                }
+            ],
+            id: 1,
+            xy: [40.774, -73.965],
+            z: 15
+        },
+
+        {
+            headline: "NYC Stair Master", 
+            info: "<p ><i>there can only be one</i><br/><br/>Where are people walking up the most flights of stairs in the NYC walk-ups? I've lived in a 6er, apparently there are a dozen with more than 10!</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill:#ccc;    polygon-opacity: 0.7;    line-opacity:0;    line-color: #FFFFFF; [landuse='02']{ [ numfloors <= 100.0] {polygon-fill: #E31A1C;}[ numfloors <= 5.0] {polygon-fill: #FC4E2A;}[ numfloors <= 4.0] {polygon-fill: #FD8D3C;}[ numfloors <= 3.0] {polygon-fill: #FEB24C;}[ numfloors <= 2] {polygon-fill: #FED976;}[ numfloors <= 1]{polygon-fill: #FFFFB2;} }}"
+                }
+            ],
+            id: 1,
+            xy: [40.7406330729812, -73.99],
+            z: 13
+        },
+
+        {
+            headline: "NYC Stair Master", 
+            info: "<p ><i>there can only be one</i><br/><br/>But then there is apparently this building, which is classified as <i>Multi-family walk-up</i> and is <b>16 floors</b> tall!. Uhm, doubt it...</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    cartocss: "#layer{polygon-fill:#ccc;    polygon-opacity: 0.7;    line-opacity:0;    line-color: #FFFFFF; [landuse='02']{ [ numfloors <= 100.0] {polygon-fill: #E31A1C;}[ numfloors <= 5.0] {polygon-fill: #FC4E2A;}[ numfloors <= 4.0] {polygon-fill: #FD8D3C;}[ numfloors <= 3.0] {polygon-fill: #FEB24C;}[ numfloors <= 2] {polygon-fill: #FED976;}[ numfloors <= 1]{polygon-fill: #FFFFB2;} }} #circle::over [landuse='02'][numfloors>15]{ marker-fill: transparent; marker-width: 24; marker-line-color: green; marker-line-width: 6; marker-line-opacity: 0.9; marker-type: ellipse;marker-allow-overlap: true;}"
+                }
+            ],
+            id: 1,
+            xy: [40.776330729812, -73.97],
+            z: 14
+        },
+
+        {
+            headline: "Which lots are the farthest from public spaces?", 
+            info: "<p>Here is an interesting question I have fumbled around with a few times but could be fun to look at more deeply: <i>where aren't there public spaces?</i> Let's take a look in <b>Manhattan</b>... <i>(don't mind the funny way it can't find central park)</i></p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/e21b7338-fbb7-11e2-a0ed-7128c9850036/viz.json", 
+            options: [
+                {
+                    sql: "SELECT 1 as cartodb_id, the_geom, the_geom_webmercator, (SELECT st_distance(ST_Envelope(the_geom), ST_Centroid(m.the_geom)) FROM mn_mappluto_13v1 WHERE landuse = '09' ORDER BY the_geom <-> m.the_geom LIMIT 1) as d, landuse FROM mn_mappluto_13v1 m",
+                    cartocss: "#layer{line-color: #FFF;line-opacity: 1;line-width: 1;polygon-opacity: 1;[ d <= 0.011] {polygon-fill: #B10026;}[ d <= 0.01] {polygon-fill: #E31A1C;}[ d <= 0.009] {polygon-fill: #FC4E2A;}[ d <= 0.008] {polygon-fill: #FD8D3C;}[ d <= 0.007] {polygon-fill: #FEB24C;}[ d <= 0.006] {polygon-fill: #FED976;}[ d <= 0.005] {polygon-fill: #eee;}[ landuse='09'] {polygon-fill: green;polygon-opacity: 0.5;}}"
+                }
+            ],
+            id: 1,
+            xy: [40.774, -73.965],
+            z: 13
+        },
+
+        {
+            headline: "Which lots are the farthest from public spaces?", 
+            info: "<p>Here is an interesting question I have fumbled around with a few times but could be fun to look at more deeply: <i>where aren't there public spaces?</i> Let's take a look in <b>Brooklyn</b>...</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/09adeda4-fbb8-11e2-9ea5-15cfc813f31e/viz.json", 
+            options: [
+                {
+                    sql: "WITH g AS (SELECT ST_Union(ST_Envelope(the_geom)) as the_geom FROM bk_mappluto_13v1 WHERE landuse = '09') SELECT 1 as cartodb_id, the_geom, the_geom_webmercator, (SELECT st_distance(the_geom, ST_Centroid(m.the_geom)) FROM g ORDER BY the_geom <-> ST_Centroid(m.the_geom) LIMIT 1) as d, landuse FROM bk_mappluto_13v1 m",
+                    cartocss: "#layer{line-color: #FFF;line-opacity: 1;line-width: 1;polygon-opacity: 1;[ d <= 0.011] {polygon-fill: #B10026;}[ d <= 0.01] {polygon-fill: #E31A1C;}[ d <= 0.009] {polygon-fill: #FC4E2A;}[ d <= 0.008] {polygon-fill: #FD8D3C;}[ d <= 0.007] {polygon-fill: #FEB24C;}[ d <= 0.006] {polygon-fill: #FED976;}[ d <= 0.005] {polygon-fill: #eee;}[ landuse='09'] {polygon-fill: green; polygon-opacity: 0.5;}}"
+                }
+            ],
+            id: 1,
+            xy: [40.66, -73.93],
+            z: 12
+        },
+
+        {
+            headline: "Which lots are the farthest from public spaces?", 
+            info: "<p>Here is an interesting question I have fumbled around with a few times but could be fun to look at more deeply: <i>where aren't there public spaces?</i> Let's take a look in <b>Queens</b>...</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/4a335440-fbb8-11e2-8ac4-3f21906cb20f/viz.json", 
+            options: [
+                {
+                    sql: "WITH g AS (SELECT ST_Union(ST_Envelope(the_geom)) as the_geom FROM qn_mappluto_13v1 WHERE landuse = '09') SELECT 1 as cartodb_id, the_geom, the_geom_webmercator, (SELECT st_distance(the_geom, ST_Centroid(m.the_geom)) FROM g ORDER BY the_geom <-> ST_Centroid(m.the_geom) LIMIT 1) as d, landuse FROM qn_mappluto_13v1 m",
+                    cartocss: "#layer{line-color: #FFF;line-opacity: 1;line-width: 1;polygon-opacity: 1;[ d <= 0.011] {polygon-fill: #B10026;}[ d <= 0.01] {polygon-fill: #E31A1C;}[ d <= 0.009] {polygon-fill: #FC4E2A;}[ d <= 0.008] {polygon-fill: #FD8D3C;}[ d <= 0.007] {polygon-fill: #FEB24C;}[ d <= 0.006] {polygon-fill: #FED976;}[ d <= 0.005] {polygon-fill: #eee;}[ landuse='09'] {polygon-fill: green;polygon-opacity: 0.5;}}"
+                }
+            ],
+            id: 1,
+            xy: [40.72, -73.84],
+            z: 12
+        },
+
+        {
+            headline: "Which lots are the farthest from public spaces?", 
+            info: "<p>Here is an interesting question I have fumbled around with a few times but could be fun to look at more deeply: <i>where aren't there public spaces?</i> Let's take a look in <b>Bronx</b>...</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/19652da8-fbb7-11e2-a75b-6139856afd6d/viz.json", 
+            options: [
+                {
+                    sql: "WITH g AS (SELECT ST_Union(ST_Envelope(the_geom)) as the_geom FROM bx_mappluto_13v1 WHERE landuse = '09') SELECT 1 as cartodb_id, the_geom, the_geom_webmercator, (SELECT st_distance(the_geom, ST_Centroid(m.the_geom)) FROM g ORDER BY the_geom <-> ST_Centroid(m.the_geom) LIMIT 1) as d, landuse FROM bx_mappluto_13v1 m",
+                    cartocss: "#layer{line-color: #FFF;line-opacity: 1;line-width: 1;polygon-opacity: 1;[ d <= 0.011] {polygon-fill: #B10026;}[ d <= 0.01] {polygon-fill: #E31A1C;}[ d <= 0.009] {polygon-fill: #FC4E2A;}[ d <= 0.008] {polygon-fill: #FD8D3C;}[ d <= 0.007] {polygon-fill: #FEB24C;}[ d <= 0.006] {polygon-fill: #FED976;}[ d <= 0.005] {polygon-fill: #eee;}[ landuse='09'] {polygon-fill: green;polygon-opacity: 0.5;}}"
+                }
+            ],
+            id: 1,
+            xy: [40.85890355725105, -73.85765075683594],
+            z: 13
+        },
+
+        {
+            headline: "Which lots are the farthest from public spaces?", 
+            info: "<p>Here is an interesting question I have fumbled around with a few times but could be fun to look at more deeply: <i>where aren't there public spaces?</i> Let's take a look in <b>Staten Island</b>...</p>", 
+            viz: "http://pluto.cartodb.com/api/v2/viz/5c8e6b3e-fbb8-11e2-a9af-619e94a2c50b/viz.json", 
+            options: [
+                {
+                    sql: "WITH g AS (SELECT ST_Union(ST_Envelope(the_geom)) as the_geom FROM si_mappluto_13v1 WHERE landuse = '09') SELECT 1 as cartodb_id, the_geom, the_geom_webmercator, (SELECT st_distance(the_geom, ST_Centroid(m.the_geom)) FROM g ORDER BY the_geom <-> ST_Centroid(m.the_geom) LIMIT 1) as d, landuse FROM si_mappluto_13v1 m",
+                    cartocss: "#layer{line-color: #FFF;line-opacity: 1;line-width: 1;polygon-opacity: 1;[ d <= 0.011] {polygon-fill: #B10026;}[ d <= 0.01] {polygon-fill: #E31A1C;}[ d <= 0.009] {polygon-fill: #FC4E2A;}[ d <= 0.008] {polygon-fill: #FD8D3C;}[ d <= 0.007] {polygon-fill: #FEB24C;}[ d <= 0.006] {polygon-fill: #FED976;}[ d <= 0.005] {polygon-fill: #eee;}[ landuse='09'] {polygon-fill: green;polygon-opacity: 0.5;}}"
+                }
+            ],
+            id: 1,
+            xy: [40.59, -74.15],
+            z: 12
+        }
+
+      ]
+
+      if(window.location.hash) {
+        var hash_value = window.location.hash.replace('#', '');
+         if (parseInt(hash_value) > 0) {
+             if (hash_value < tour.length) {
+                next = parseInt(hash_value)
+             }
+         }
+         
+      }
+
+      last = next-1;
+      move();
+
+      $('#next').click(function(){
+        clearTimeout(nextTimer);
+        move();
+      });
+
+      $('#back').click(function(){
+        console.log(next)
+        clearTimeout(nextTimer);
+        if (next==0) next = tour.length;
+        next = next-2;
+        if (next<0) next = tour.length-1;
+        move();
+      });
+
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43031274-1', 'andrewxhill.github.io');
+      ga('send', 'pageview');
+
+    </script>
+  
+      
+</body></html>

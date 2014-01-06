@@ -1,0 +1,944 @@
+{
+  "slides": [
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 287,
+          "y": 296,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div align=\"center\">FOSS4G 2013<br>Nottingham<br></div>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 0,
+      "selected": true,
+      "active": true,
+      "markdown": "",
+      "x": 180,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 301,
+          "y": 340,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Ein Überblick<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 1,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "x": 470,
+      "y": 180
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 361,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "QGIS 2.0<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 105,
+          "y": 257,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\"><font face=\"'Lato', sans-serif\">Quantum</font><br><br><font face=\"'Lato', sans-serif\">Verbesserungen:&nbsp;</font>Layout, ModelBuilder, ...</div><div align=\"center\"><font face=\"'Lato', sans-serif\"><br></font></div><div align=\"center\"><font face=\"'Lato', sans-serif\">QGIS als Plattform:&nbsp;</font></div><div align=\"center\">Desktop,&nbsp;<font face=\"'Lato', sans-serif\">Server,&nbsp;</font>Web, Mobile</div>",
+          "selected": false
+        },
+        {
+          "src": "http://i.imgur.com/g0MlQSd.png",
+          "type": "Image",
+          "x": 423,
+          "y": 220,
+          "scale": {
+            "x": 0.41061946902654867,
+            "y": 0.41061946902654867,
+            "width": 232,
+            "height": 154.3929203539823
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "x": 470,
+      "y": 180
+    },
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/QdSukj7.jpg",
+          "type": "Image",
+          "x": 3,
+          "y": 66,
+          "scale": {
+            "x": 1.27375,
+            "y": 1.27375,
+            "width": 1019,
+            "height": 636.875
+          },
+          "imageType": "JPG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "background": "bg-default",
+      "x": 470,
+      "y": 180
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 234,
+          "y": 340,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Web Frameworks<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 4,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 361,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "GeoNode<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 150,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\"><font>GDI + Kollaboration</font><br><br><font>PostGIS, GeoServer, OpenLayers,...<br>+ django</font><br></div><font><br></font>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 5,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "x": 470,
+      "y": 180
+    },
+    {
+      "components": [
+        {
+          "src": "http://beta.dev.geonode.org/layers/",
+          "type": "WebFrame",
+          "x": 37,
+          "y": 0,
+          "scale": {
+            "x": 0.9895833333333334,
+            "y": 0.9895833333333334,
+            "width": 950,
+            "height": 760
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 6,
+      "selected": false,
+      "active": false,
+      "background": "bg-default",
+      "x": 470,
+      "y": 180
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 234,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">Raumzeitliche Phänomene<br><br>Nutzer -&gt; Storyteller<br></div>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "MapStory<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 7,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "src": "http://www.youtube.com/watch?v=pgJHB7kzkjM",
+          "type": "Video",
+          "x": 0,
+          "y": -1,
+          "scale": {
+            "width": 1024,
+            "height": 769
+          },
+          "shortSrc": "pgJHB7kzkjM",
+          "videoType": "youtube",
+          "srcType": "yt",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 8,
+      "selected": false,
+      "active": false,
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 438,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "ckan",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 97,
+          "y": 255,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">wachsende Funktionalität für Geodaten<br><br>Katalogdienst (CSW) + Map widgets<br></div>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 9,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "surface": "bg-default",
+      "background": "bg-default"
+    },
+    {
+      "components": [],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 10,
+      "selected": false,
+      "active": false,
+      "background": "img:http://i.imgur.com/2K4GNM4.jpg",
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 389,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Cartaro",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 289,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">CMS + Web GIS<br><br></div><div align=\"center\">Drupal + OpenLayers<br></div>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 11,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "src": "http://demo.cartaro.org/switzerland",
+          "type": "WebFrame",
+          "x": 41,
+          "y": 4,
+          "scale": {
+            "x": 0.9822916666666667,
+            "y": 0.9822916666666667,
+            "width": 943,
+            "height": 754.4
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 12,
+      "selected": false,
+      "active": false,
+      "background": "bg-default",
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 340,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Cloud GIS<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 13,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Cloud GIS<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 368,
+          "y": 213,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">ArcGIS online</div><div align=\"center\">CartoDB</div><div align=\"center\">geocommons</div><div align=\"center\">GIScloud</div><div align=\"center\">MapBox</div><div align=\"center\">Mango</div>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 245,
+          "y": 627,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font>Buch: www.onlinegis.com</font>",
+          "size": 48,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 14,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "src": "http://andrewxhill.github.io/cartodb-examples/scroll-story/pluto/index.html#4",
+          "type": "WebFrame",
+          "x": 36,
+          "y": 3,
+          "scale": {
+            "x": 0.9916666666666667,
+            "y": 0.9916666666666667,
+            "width": 952,
+            "height": 761.6
+          },
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 11,
+          "y": 49,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font>&nbsp; &nbsp; &nbsp; &nbsp;CartoDB</font>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 15,
+      "selected": false,
+      "active": false
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 11,
+          "y": 49,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font>&nbsp; &nbsp; &nbsp; &nbsp;GIScloud</font>",
+          "size": 72,
+          "selected": false
+        },
+        {
+          "src": "http://www.giscloud.com/map/16594/germany-6000000-features",
+          "type": "WebFrame",
+          "x": 36,
+          "y": 3,
+          "scale": {
+            "x": 0.9916666666666667,
+            "y": 0.9916666666666667,
+            "width": 952,
+            "height": 761.6
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 16,
+      "selected": false,
+      "active": false
+    },
+    {
+      "components": [
+        {
+          "src": "https://tiles.mapbox.com/newmap#6/50.198/8.108",
+          "type": "WebFrame",
+          "x": 38,
+          "y": 5,
+          "scale": {
+            "x": 0.9875,
+            "y": 0.9875,
+            "width": 948,
+            "height": 758.4000000000001
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 17,
+      "selected": false,
+      "active": false
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 349,
+          "y": 340,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "JavaScript",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 18,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 294,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "OpenLayers 3<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 199,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">2D + 3D</div><div align=\"center\"><br>Performanz + Funktionalität</div><div align=\"center\"><br>Responsive Design: Bootstrap<br></div>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 19,
+      "selected": false,
+      "active": false,
+      "markdown": "",
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "src": "http://map3.geo.admin.ch/",
+          "type": "WebFrame",
+          "x": 36,
+          "y": 3,
+          "scale": {
+            "x": 0.9916666666666667,
+            "y": 0.9916666666666667,
+            "width": 952,
+            "height": 761.6
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 20,
+      "selected": false,
+      "active": false,
+      "background": "bg-default",
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 307,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "weitere libs...<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 373,
+          "y": 196,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">Leaflet<br>D3<br>topojson<br>node.js<br>walkshed.js<br>shapefile.js<br>shapely.js<br>koop<br>terraformer...<br></div>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 21,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "src": "http://mbostock.github.io/d3/talk/20111018/azimuthal.html",
+          "type": "WebFrame",
+          "x": 34,
+          "y": -1,
+          "scale": {
+            "x": 0.9958333333333335,
+            "y": 0.9958333333333335,
+            "width": 956.0000000000001,
+            "height": 764.8000000000001
+          },
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 11,
+          "y": 49,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font>&nbsp; &nbsp; &nbsp; &nbsp;D3</font>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 22,
+      "selected": false,
+      "active": false,
+      "background": "bg-default"
+    },
+    {
+      "components": [
+        {
+          "src": "http://walkshed.js.s3.amazonaws.com/index.html",
+          "type": "WebFrame",
+          "x": 36,
+          "y": 3,
+          "scale": {
+            "x": 0.9927083333333333,
+            "y": 0.9927083333333333,
+            "width": 953,
+            "height": 762.4
+          },
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 11,
+          "y": 49,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font>&nbsp; &nbsp; &nbsp; &nbsp;walkshed.js</font>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 23,
+      "selected": false,
+      "active": false,
+      "x": 775,
+      "y": 181
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 228,
+          "y": 65,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "JS Präsentationen",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        },
+        {
+          "TextBox": {},
+          "x": 389,
+          "y": 219,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<div align=\"center\">Libs:<br>impress.js<br>bespoke.js<br>reveal.js<br><br>Editors:<br>strut.io<br>slid.es<br></div>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 24,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 396,
+          "y": 341,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "Danke!<br>",
+          "size": 72,
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 25,
+      "selected": false,
+      "active": false,
+      "markdown": ""
+    }
+  ],
+  "activeSlide": {
+    "components": [
+      {
+        "TextBox": {},
+        "x": 287,
+        "y": 296,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "<div align=\"center\">FOSS4G 2013<br>Nottingham<br></div>",
+        "size": 72,
+        "selected": false,
+        "skewY": 0
+      }
+    ],
+    "z": 0,
+    "impScale": 3,
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "index": 0,
+    "selected": true,
+    "active": true,
+    "markdown": "",
+    "x": 180,
+    "y": 181
+  },
+  "fileName": "FOSS4G.strut",
+  "deckVersion": "1.0",
+  "cannedTransition": "carousel",
+  "customBackgrounds": {
+    "bgs": [
+      {
+        "klass": "bg-custom-eeeeee",
+        "style": "#eeeeee"
+      }
+    ]
+  }
+}

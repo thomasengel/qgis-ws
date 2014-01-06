@@ -1,0 +1,206 @@
+
+/* gettext library */
+
+var catalog = new Array();
+
+function pluralidx(n) {
+  var v=(n != 1);
+  if (typeof(v) == 'boolean') {
+    return v ? 1 : 0;
+  } else {
+    return v;
+  }
+}
+catalog['About this Map'] = '\u00dcber diese Karte';
+catalog['Abstract'] = 'Kurzbeschreibung';
+catalog['Abstract:'] = 'Kurzbeschreibung:';
+catalog['Add Layers'] = 'Ebenen hinzuf\u00fcgen';
+catalog['Add user...'] = 'Benutzer hinzuf\u00fcgen...';
+catalog['All'] = 'Alles';
+catalog['Any registered user'] = 'Jeder registrierter Benutzer';
+catalog['Anyone'] = 'Jeder';
+catalog['Area'] = 'Fl\u00e4che';
+catalog['Available Layers'] = 'Verf\u00fcgbare Ebenen';
+catalog['Background'] = 'Hintergrund';
+catalog['Cancel'] = 'Abbrechen';
+catalog['Change layer format and style'] = '\u00c4ndern Sie Layer-Format und Stil';
+catalog['Clear All'] = 'Alles L\u00f6schen';
+catalog['Clear Selected'] = 'L\u00f6sche Ausgew\u00e4hlte';
+catalog['Connection Error'] = 'Verbindungsfehler';
+catalog['Contact'] = 'Kontakt';
+catalog['Create Map'] = 'Karte erzeugen';
+catalog['Creating PDF...'] = 'Erstelle PDF ...';
+catalog['Data'] = 'Daten';
+catalog['Details...'] = 'Einzelheiten...';
+catalog['Done'] = 'Fertig';
+catalog['Download:'] = 'Herunterladen:';
+catalog['Downloading...'] = 'Herunterladen ...';
+catalog['Edit Styles'] = 'Bearbeiten von Stilen';
+catalog['Edit layer styles'] = 'Bearbeiten von Ebenenstilen';
+catalog['Enter comments here.'] = 'Kommentare hier eingeben';
+catalog['Enter map title here.'] = 'Kartentitel hier eingeben.';
+catalog['Error While Saving'] = 'Fehler beim Speichern';
+catalog['Error contacting server.\n Please check the url and try again.'] = 'Fehler beim Verbinden mit Server.\nBitte \u00fcberpr\u00fcfen Sie die URL und versuchen Sie es erneut.';
+catalog['Export Map'] = 'Karte exportieren ';
+catalog['Get Feature Info'] = 'Get Feature Info';
+catalog['Height'] = 'H\u00f6he';
+catalog['Include legend?'] = 'Legende einf\u00fcgen?';
+catalog['Keywords:'] = 'Schl\u00fcsselw\u00f6rter:';
+catalog['Large'] = 'Gro\u00df';
+catalog['Last Modified'] = 'Zuletzt ge\u00e4ndert';
+catalog['Layer Properties'] = 'Ebeneneigenschaften';
+catalog['Layers'] = 'Ebenen';
+catalog['Legend'] = 'Legende';
+catalog['Length'] = 'L\u00e4nge';
+catalog['Loading Map...'] = 'Karte ladet ...';
+catalog['Loading'] = 'Laden';
+catalog['Loading...'] = 'Laden ...';
+catalog['Map Layers'] = 'Kartenebenen';
+catalog['Map Size'] = 'Kartengr\u00f6\u00dfe';
+catalog['Map'] = 'Karte';
+catalog['Measure'] = 'Messen';
+catalog['Metadata Links:'] = 'Metatdaten Links:';
+catalog['Mini'] = 'Mini';
+catalog['Name'] = 'Name';
+catalog['Next'] = 'N\u00e4chste';
+catalog['No Layers Selected'] = 'Keine Ebenen ausgew\u00e4hlt';
+catalog['No abstract is provided for this layer.'] = 'Keine Kurzbeschreibung ist f\u00fcr diese Ebene zur Verf\u00fcgung gestellt.';
+catalog['No attribution information is provided for this layer.'] = 'Kein Attributierungsinformationen vorgegeben f\u00fcr diese Ebene.';
+catalog['No background'] = 'Kein Hintergrund';
+catalog['No download URLs are definied for this layer.'] = 'Keine Download-URLs sind f\u00fcr diese Ebene definied.';
+catalog['No keywords are listed for this layer.'] = 'Keine Schl\u00fcsselw\u00f6rter sind f\u00fcr diese Ebene aufgef\u00fchrt.';
+catalog['No layers are currently selected.'] = 'Zur Zeit sind keine Ebenen ausgew\u00e4hlt.';
+catalog['No metadata URLs are defined for this layer.'] = 'Keine Metadaten-URLs sind f\u00fcr diese Ebene definiert.';
+catalog['None'] = 'Nichts';
+catalog['Only the following users or groups:'] = 'Nur die folgenden Benutzer oder Gruppen:';
+catalog['Only users who can edit'] = 'Nur Benutzer, die auch bearbeiten d\u00fcrfen';
+catalog['Open Map'] = 'Karte \u00f6ffnen';
+catalog['Operation Failed'] = 'Der Vorgang ist fehlgeschlagen';
+catalog['Pan Map'] = 'Karte Schieben';
+catalog['Paper size:'] = 'Papiergr\u00f6\u00dfe:';
+catalog['Permalink'] = 'Permalink';
+catalog['Please wait'] = 'Bitte warten';
+catalog['Premium'] = 'Premium';
+catalog['Prev'] = 'Vorherige';
+catalog['Print Map'] = 'Karte Drucken';
+catalog['Print Preview'] = 'Druckvorschau';
+catalog['Print'] = 'Druck';
+catalog['Properties'] = 'Eigenschaften';
+catalog['Provided by:'] = 'Bereitgestellt von:';
+catalog['Publish Map'] = 'Karte publizieren';
+catalog['Queryable'] = 'Abfragbar';
+catalog['Remove Layer'] = 'Ebene entfernen';
+catalog['Resolution:'] = 'Aufl\u00f6sung:';
+catalog['Save Map'] = 'Karte speichern';
+catalog['Save as Copy'] = 'Speichern als Kopie';
+catalog['Save'] = 'Speichern';
+catalog['Search Maps'] = 'Suche Karten';
+catalog['Search'] = 'Suche';
+catalog['Select'] = 'Selektieren';
+catalog['Select:'] = 'Selektieren:';
+catalog['Selected Layers'] = 'Ausgew\u00e4hlte Ebenen';
+catalog['Showing'] = 'Angezeigt';
+catalog['Small'] = 'Klein';
+catalog['Sorry, your map could not be saved.'] = 'Leider konnte Ihre Karte nicht gespeichert werden.';
+catalog['Switch to Google Earth 3D Viewer'] = 'Wechseln Sie zu Google Earth 3D-Viewer';
+catalog['The map that you are trying to load does not exist.  Creating a new map instead.'] = 'Die Karte, die Sie versuchen zu laden, existiert nicht. Erstellen einer neuen Karte stattdessen.';
+catalog['The server returned an error'] = 'Der Server gab einen Fehler zur\u00fcck';
+catalog['This data is stored on a remote server'] = 'Diese Daten werden auf einem Remote-Server gespeichert';
+catalog['This map has not yet been saved.'] = 'Diese Karte wurde noch nicht gespeichert.';
+catalog['Title'] = 'Titel';
+catalog['Unknown Map'] = 'Unbekannte Karte';
+catalog['View available data from:'] = 'Schaue verf\u00fcgbare Daten an von:';
+catalog['View this Map'] = 'Karte anschauen';
+catalog['Who can edit this data?'] = 'Wer darf diese Daten bearbeiten?';
+catalog['Who can manage and edit this data?'] = 'Wer darf diese Daten verwalten und bearbeiten?';
+catalog['Who can view and download this data?'] = 'Wer darf diese Daten ansehen und herunterladen?';
+catalog['Width'] = 'Breite';
+catalog['You do not have permission to view this data'] = 'Sie haben keine Berechtigung, um diese Daten anzusehen';
+catalog['You must be logged in to save this map.'] = 'Um diese Karte zu speichern m\u00fcssen Sie angemeldet sein.';
+catalog['Your map is ready to be published to the web!  Simply copy the following HTML to embed the map in your website:'] = 'Ihre Karte ist bereit, um im Internet ver\u00f6ffentlicht zu werden! Kopieren Sie einfach den folgenden HTML, um die Karte in Ihre Webseite einzubinden:';
+catalog['Your search did not match any items.'] = 'Ihre Suche brachte keine Ergebnisse hervor.';
+catalog['Zoom In'] = 'Einzoomen';
+catalog['Zoom Level {zoom}'] = 'Zoomstufe {zoom}';
+catalog['Zoom Level'] = 'Zoomstufe';
+catalog['Zoom Out'] = 'Auszoomen';
+catalog['Zoom level'] = 'Zoomstufe';
+catalog['Zoom to Layer Extent'] = 'Zoom auf Ebenenextent';
+catalog['Zoom to Next Extent'] = 'Zoom auf n\u00e4chsten Bereich';
+catalog['Zoom to Previous Extent'] = 'Zoom zu bisherigen Bereich';
+catalog['Zoom to Visible Extent'] = 'Zoom auf sichtbaren Exten';
+catalog['of'] = 'von';
+catalog['or add a new server.'] = 'oder einen neuen Server hinzuf\u00fcgen';
+catalog['permalink'] = 'permalink';
+
+
+function gettext(msgid) {
+  var value = catalog[msgid];
+  if (typeof(value) == 'undefined') {
+    return msgid;
+  } else {
+    return (typeof(value) == 'string') ? value : value[0];
+  }
+}
+
+function ngettext(singular, plural, count) {
+  value = catalog[singular];
+  if (typeof(value) == 'undefined') {
+    return (count == 1) ? singular : plural;
+  } else {
+    return value[pluralidx(count)];
+  }
+}
+
+function gettext_noop(msgid) { return msgid; }
+
+function pgettext(context, msgid) {
+  var value = gettext(context + '\x04' + msgid);
+  if (value.indexOf('\x04') != -1) {
+    value = msgid;
+  }
+  return value;
+}
+
+function npgettext(context, singular, plural, count) {
+  var value = ngettext(context + '\x04' + singular, context + '\x04' + plural, count);
+  if (value.indexOf('\x04') != -1) {
+    value = ngettext(singular, plural, count);
+  }
+  return value;
+}
+
+function interpolate(fmt, obj, named) {
+  if (named) {
+    return fmt.replace(/%\(\w+\)s/g, function(match){return String(obj[match.slice(2,-2)])});
+  } else {
+    return fmt.replace(/%s/g, function(match){return String(obj.shift())});
+  }
+}
+
+/* formatting library */
+
+var formats = new Array();
+
+formats['DATETIME_FORMAT'] = 'N j, Y, P';
+formats['DATE_FORMAT'] = 'N j, Y';
+formats['DECIMAL_SEPARATOR'] = '.';
+formats['MONTH_DAY_FORMAT'] = 'F j';
+formats['NUMBER_GROUPING'] = '0';
+formats['TIME_FORMAT'] = 'P';
+formats['FIRST_DAY_OF_WEEK'] = '0';
+formats['TIME_INPUT_FORMATS'] = ['%H:%M:%S', '%H:%M'];
+formats['THOUSAND_SEPARATOR'] = ',';
+formats['DATE_INPUT_FORMATS'] = ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y'];
+formats['YEAR_MONTH_FORMAT'] = 'F Y';
+formats['SHORT_DATE_FORMAT'] = 'm/d/Y';
+formats['SHORT_DATETIME_FORMAT'] = 'm/d/Y P';
+formats['DATETIME_INPUT_FORMATS'] = ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M', '%m/%d/%y'];
+
+function get_format(format_type) {
+    var value = formats[format_type];
+    if (typeof(value) == 'undefined') {
+      return format_type;
+    } else {
+      return value;
+    }
+}

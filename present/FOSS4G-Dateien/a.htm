@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title> Ebenen erforschen -  example.com  </title>
+    
+      <link href="a_data/base.css" rel="stylesheet">
+      <link href="a_data/lato_font.css" rel="stylesheet" type="text/css">
+      <link href="a_data/ext-compatibility.css" rel="stylesheet">
+      
+      <link href="a_data/assets.css" rel="stylesheet">
+      
+      
+      
+    
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="data data-list explore">
+    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <section>
+        <div class="container">
+          <div class="row">
+            <div class="span3">
+              <a href="http://beta.dev.geonode.org/"><span class="nav-logo"></span></a>
+            </div>
+            <div class="span9">
+              <div class="nav-collapse pull-right">
+                <div class="pull-right">
+                  <ul class="nav pull-right account-bar">
+                    
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Anmelden</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <form action="/account/login/" method="post" class="sign-in">
+                            <input name="csrfmiddlewaretoken" value="VNOoX7z4wzASxKAShv4g5Tc385Vs7P3l" type="hidden">
+                              <label for="id_username">Benutzer:</label>
+                              <input id="id_username" name="username" type="text">
+                              <label for="id_password">Kennwort:</label>
+                              <input id="id_password" name="password" type="password">
+                              <label class="checkbox">
+                                <input type="checkbox">
+                                  Angemeldet bleiben
+                              </label>
+                              <button type="submit" class="btn pull-right">Anmelden</button>
+                            </form>
+                          </li>
+                        </ul>
+                      </li>
+                      
+                      <li class="divider-v">|</li>
+                      <li class="actions">
+                        <a href="http://beta.dev.geonode.org/help/" rel="tooltip" title="help"><i class="icon-question-sign"></i></a>
+                      </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <form class="input-append  pull-right" action="/search/" method="GET">
+                
+                <div style="width: 220px" id="s2id_search" class="select2-container">    <a href="#" onclick="return false;" class="select2-choice select2-default">   <span>Search...</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input autocomplete="off" class="select2-input" type="text">   </div>   <ul class="select2-results">   </ul></div></div><input style="display: none;" id="search" name="q" type="text">
+              </form>
+            </div>
+          </div>
+          <div class="row nav-box">
+            <div class="span10">
+              <nav class="main-nav">
+                <ul>
+                  <li id="nav_home">
+                    <a href="http://beta.dev.geonode.org/">Startseite</a>
+                  </li>
+                  <li class="current" id="nav_data">
+                    <a href="http://beta.dev.geonode.org/layers/">Ebenen</a>
+                  </li>
+                  <li id="nav_maps">
+                    <a href="http://beta.dev.geonode.org/maps/">Karten</a>
+                  </li>
+    
+                  
+                  <li id="nav_documents">
+                    <a href="http://beta.dev.geonode.org/documents/">Dokumente</a>
+                  </li>
+                  
+                  <li id="nav_people">
+                    <a href="http://beta.dev.geonode.org/people/">Leute</a>
+                  </li>
+                  <li id="nav_search">
+                    <a href="http://beta.dev.geonode.org/search/form/">Suchen</a>
+                  </li>
+                  
+                </ul>
+              </nav>
+            </div> <!-- ./span10 -->
+            <div class="span2">
+              <ul class="social">
+                  <li><a href="http://www.facebook.com/sharer.php?u=http://beta.dev.geonode.org/layers/" class="fb">facebook</a></li>
+                  <li><a href="https://twitter.com/share?url=http://beta.dev.geonode.org/layers/" class="tw">twitter</a></li>
+                  <li><a href="https://plusone.google.com/_/1/confirm?hl=en&amp;url=http://beta.dev.geonode.org/layers/" class="gp">google+</a></li>
+              </ul>
+            </div> <!-- /.span2 -->
+          </div> <!-- /.row nav-box -->
+        </div> <!-- /.container -->
+        </section>
+      </div> <!-- /.navbar-inner -->
+    </div> <!-- /.navbar navbar-fixed-top -->
+    
+
+    
+    
+    <div class="content-wrap">
+      
+      <div class="container">
+        <div class="row">
+        
+    <div class="span12">
+      <!--nav class="back"><a href="/layers/"><i class="icon-chevron-left"></i> See all Layers</a></nav-->
+      <ul class="nav nav-tabs" id="subnav-tabs">
+            <li><a href="http://beta.dev.geonode.org/layers/" class="explore">Ebenen erforschen</a></li>
+            <!-- switch to us the new upload -->
+            <li><a href="http://beta.dev.geonode.org/upload/" class="upload">Ebenen hochladen</a></li>
+      </ul>
+    </div>
+    
+  <div class="span12">
+    <h2 class="page-title">Ebenen erforschen</h2>
+  </div>
+  <div class="span8 filter">      
+    
+
+<ul class="nav nav-pills filter" id="sort">
+  <li><a data-class="newest" class="date-query selected">Neueste</a></li>
+  <li><a data-class="oldest" class="date-query">Weniger neueste</a></li>
+  <li><a data-class="alphaaz" class="date-query">A - Z</a></li>
+  <li><a data-class="alphaza" class="date-query">Z - A</a></li>
+  <li><a data-class="popularity" class="date-query">Beliebteste</a></li>
+  <li><a data-class="rel" class="date-query">Relevanz</a></li>
+</ul>
+
+  </div>
+  <div class="span4">
+    <div class="pull-right" data-viewby="list">
+    
+<nav class="viewby">
+    Angesehen von
+    <a href="" class="grid"><i class="icon-th"></i> Raster</a>
+    <a href="" class="list active"><i class="icon-th-list"></i> Liste</a>
+</nav>
+
+    </div>
+  </div>
+  <div class="span12">
+    <div class="row" id="contain-slider">
+      <div class="span4">
+        <div class="selections">
+          <h4>
+            Deine Auswahl
+            <a href="http://beta.dev.geonode.org/layers/" id="clear-search" class="pull-right">Clear all</a>
+          </h4>
+        </div>
+        <div id="slide-pane">
+          <a href="#" class="toggle toggle-pane"><i class="icon-chevron-left"></i></a>
+           
+          
+
+
+<nav class="filter">
+  <h2><a href="#" class="toggle toggle-nav"><i class="icon-chevron-down"></i>Kategorien</a></h2>
+  <ul class="nav" id="categories">
+    <li><a data-class="all" class="active trigger-query">Alle Kategorien</a></li>
+    
+    
+    <li><a data-class="biota" class="trigger-query">Biota
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="boundaries" class="trigger-query">Boundaries
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="climatologyMeteorologyAtmosphere" class="trigger-query">Climatology Meteorology Atmosphere
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="economy" class="trigger-query">Economy
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="elevation" class="trigger-query">Elevation
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="environment" class="trigger-query">Environment
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="farming" class="trigger-query">Farming
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="geoscientificInformation" class="trigger-query">Geoscientific Information
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="health" class="trigger-query">Health
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="imageryBaseMapsEarthCover" class="trigger-query">Imagery Base Maps Earth Cover
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="inlandWaters" class="trigger-query">Inland Waters
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="intelligenceMilitary" class="trigger-query">Intelligence Military
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="location" class="trigger-query">Location
+    
+    <span class="badge pull-right">18</span>
+    
+    </a></li>
+    
+    <li><a data-class="oceans" class="trigger-query">Oceans
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="planningCadastre" class="trigger-query">Planning Cadastre
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="society" class="trigger-query">Society
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="structure" class="trigger-query">Structure
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="transportation" class="trigger-query">Transportation
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+    <li><a data-class="utilitiesCommunication" class="trigger-query">Utilities Communication
+    
+    <span class="badge pull-right">0</span>
+    
+    </a></li>
+    
+  </ul>
+</nav>
+<nav class="filter">
+  <h2><a href="#" class="toggle toggle-nav"><i class="icon-chevron-down"></i>Datum</a></h2>
+  <ul class="nav" id="date_start">
+    <label>Date begins after:</label>
+    <li><input value="yyyy-mm-dd" data-date-format="yyyy-mm-dd" class="datepicker" placeholder="yyyy-mm-dd" type="text"></li>
+  </ul>
+  <ul class="nav" id="date_end">
+    <label>Date ends before:</label>
+    <li><input value="yyyy-mm-dd" data-date-format="yyyy-mm-dd" class="datepicker" placeholder="yyyy-mm-dd" type="text"></li>
+  </ul>
+</nav>
+<nav class="filter">
+  <h2><a href="#" class="toggle toggle-nav"><i class="icon-chevron-down"></i> Schlülsselwörter</a></h2>
+  <ul class="nav" id="keywords">
+    
+  </ul>
+</nav>
+
+          
+        </div>
+      </div>
+      <div class="tab-content paginate paginate-auto" id="search-content">
+        
+
+<div class="tab-pane active list paginate-contents" id="all">
+  <p class="search-count">Total: 18</p>
+
+
+
+  
+    
+      
+
+
+
+
+
+
+
+
+<article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:greenland"><img class="thumb" src="a_data/d4e9a3b1d302124f691a8648960ccb2d.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:greenland">greenland</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/admin/">admin</a>, 22 Stunden, 33 Minuten vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:greenland"><strong>13</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:greenland#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-18" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:greenland" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-18">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "greenland"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Agreenland&amp;width=1418&amp;bbox=-73.39145%2C59.7644%2C-11.72105%2C83.674733&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Agreenland&amp;width=1418&amp;bbox=-73.39145%2C59.7644%2C-11.72105%2C83.674733&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Agreenland&amp;width=1418&amp;bbox=-73.39145%2C59.7644%2C-11.72105%2C83.674733&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Agreenland&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature">Zipped Shapefile</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Agreenland&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 2.0</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Agreenland&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 3.1.1</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Agreenland&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">CSV</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Agreenland&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">Excel</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Agreenland&amp;outputFormat=json&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GeoJSON</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Agreenland&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Agreenland&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:greenland&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article>
+    
+  
+
+  
+    
+      
+
+
+
+
+
+
+
+
+<article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:iceland"><img class="thumb" src="a_data/e9076e350b433905276adbdf7317d837.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:iceland">iceland</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/admin/">admin</a>, 23 Stunden, 9 Minuten vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:iceland"><strong>14</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:iceland#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-17" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:iceland" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-17">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "iceland"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aiceland&amp;width=1736&amp;bbox=-25.3873%2C63.426633%2C-13.5579%2C67.174067&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aiceland&amp;width=1736&amp;bbox=-25.3873%2C63.426633%2C-13.5579%2C67.174067&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aiceland&amp;width=1736&amp;bbox=-25.3873%2C63.426633%2C-13.5579%2C67.174067&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Aiceland&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature">Zipped Shapefile</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aiceland&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 2.0</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aiceland&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 3.1.1</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aiceland&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">CSV</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aiceland&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">Excel</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aiceland&amp;outputFormat=json&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GeoJSON</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aiceland&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aiceland&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:iceland&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article>
+    
+  
+
+  
+    
+      
+
+
+
+
+
+
+
+
+<article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:test_grid"><img class="thumb" src="a_data/2cc52aa046c489b8b899f06da50fcf76.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:test_grid">Test Grid</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/geonode/">geonode</a>, 2 Tage, 15 Stunden vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:test_grid"><strong>11</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:test_grid#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-16" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:test_grid" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-16">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "Test Grid"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Atest_grid&amp;width=392&amp;bbox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Atest_grid&amp;width=392&amp;bbox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Atest_grid&amp;width=392&amp;bbox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=ArcGrid&amp;request=GetCoverage&amp;height=550&amp;width=392&amp;version=1.0.0&amp;BBox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;Coverage=geonode%3Atest_grid">ArcGrid</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=GeoTIFF&amp;request=GetCoverage&amp;height=550&amp;width=392&amp;version=1.0.0&amp;BBox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;Coverage=geonode%3Atest_grid">GeoTIFF</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=Gtopo30&amp;request=GetCoverage&amp;height=550&amp;width=392&amp;version=1.0.0&amp;BBox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;Coverage=geonode%3Atest_grid">Gtopo30</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=ImageMosaic&amp;request=GetCoverage&amp;height=550&amp;width=392&amp;version=1.0.0&amp;BBox=96.956%2C-5.5187329999999%2C97.10970532%2C-5.3035455519999&amp;Coverage=geonode%3Atest_grid">ImageMosaic</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Atest_grid&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Atest_grid&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:test_grid&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article>
+    
+  
+
+  
+    
+      
+
+
+
+
+
+
+
+
+<article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:relief_san_andres"><img class="thumb" src="a_data/dadb3ab8fbd2f7d2a8dcadc1abc6f806.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:relief_san_andres">Relief San Andres</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/geonode/">geonode</a>, 2 Tage, 15 Stunden vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:relief_san_andres"><strong>10</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:relief_san_andres#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-15" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:relief_san_andres" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-15">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "Relief San Andres"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Arelief_san_andres&amp;width=825&amp;bbox=-84.0%2C11.0%2C-78.0%2C15.0&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Arelief_san_andres&amp;width=825&amp;bbox=-84.0%2C11.0%2C-78.0%2C15.0&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Arelief_san_andres&amp;width=825&amp;bbox=-84.0%2C11.0%2C-78.0%2C15.0&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=ArcGrid&amp;request=GetCoverage&amp;height=550&amp;width=825&amp;version=1.0.0&amp;BBox=-84.0%2C11.0%2C-78.0%2C15.0&amp;Coverage=geonode%3Arelief_san_andres">ArcGrid</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=GeoTIFF&amp;request=GetCoverage&amp;height=550&amp;width=825&amp;version=1.0.0&amp;BBox=-84.0%2C11.0%2C-78.0%2C15.0&amp;Coverage=geonode%3Arelief_san_andres">GeoTIFF</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=Gtopo30&amp;request=GetCoverage&amp;height=550&amp;width=825&amp;version=1.0.0&amp;BBox=-84.0%2C11.0%2C-78.0%2C15.0&amp;Coverage=geonode%3Arelief_san_andres">Gtopo30</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wcs?crs=EPSG%3A4326&amp;service=WCS&amp;format=ImageMosaic&amp;request=GetCoverage&amp;height=550&amp;width=825&amp;version=1.0.0&amp;BBox=-84.0%2C11.0%2C-78.0%2C15.0&amp;Coverage=geonode%3Arelief_san_andres">ImageMosaic</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Arelief_san_andres&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Arelief_san_andres&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:relief_san_andres&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article>
+    
+  
+
+
+<article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_end_date"><img class="thumb" src="a_data/7a9c005861af6c96d21da53e46c37370.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_end_date">Boxes With End Date</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/geonode/">geonode</a>, 2 Tage, 15 Stunden vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_end_date"><strong>7</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_end_date#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-14" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:boxes_with_end_date" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-14">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "Boxes With End Date"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_end_date&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_end_date&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_end_date&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Aboxes_with_end_date&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature">Zipped Shapefile</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_end_date&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 2.0</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_end_date&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 3.1.1</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_end_date&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">CSV</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_end_date&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">Excel</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_end_date&amp;outputFormat=json&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GeoJSON</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_end_date&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_end_date&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:boxes_with_end_date&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article><article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field"><img class="thumb" src="a_data/2f4d82fc9ba148ac495892e74521993c.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field">Boxes With Year Field</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/geonode/">geonode</a>, 2 Tage, 15 Stunden vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field"><strong>4</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-13" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:boxes_with_year_field" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-13">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "Boxes With Year Field"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_year_field&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_year_field&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_year_field&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Aboxes_with_year_field&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature">Zipped Shapefile</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 2.0</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 3.1.1</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">CSV</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">Excel</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field&amp;outputFormat=json&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GeoJSON</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_year_field&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_year_field&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:boxes_with_year_field&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article><article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field2"><img class="thumb" src="a_data/252ff5edc8b71a8143974816446c741d.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field2">Boxes With Year Field2</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/geonode/">geonode</a>, 2 Tage, 15 Stunden vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field2"><strong>4</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_year_field2#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-12" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:boxes_with_year_field2" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-12">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "Boxes With Year Field2"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_year_field2&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_year_field2&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_year_field2&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Aboxes_with_year_field2&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature">Zipped Shapefile</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field2&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 2.0</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field2&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 3.1.1</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field2&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">CSV</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field2&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">Excel</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_year_field2&amp;outputFormat=json&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GeoJSON</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_year_field2&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_year_field2&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:boxes_with_year_field2&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article><article>
+  <div class="content">
+    <div class="item-header">
+      <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_dates_bc"><img class="thumb" src="a_data/70885a54c2c84584b01e7918decd7a99.png"></a>
+      <h3><i class="icon-unchecked icon-rotate-45"></i> <a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_dates_bc">Boxes With Dates Bc</a></h3>   
+    </div>
+    <div class="details">
+      <div class="meta">
+        <p>Layer von <a href="http://beta.dev.geonode.org/people/profile/geonode/">geonode</a>, 2 Tage, 15 Stunden vor</p>
+        <p class="abstract">No abstract provided</p>
+        <ul class="nav stats">
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_dates_bc"><strong>2</strong> ansehens</a></li>
+          <li><a href="http://beta.dev.geonode.org/layers/geonode:boxes_with_dates_bc#rate"><strong><span class="avg_rating" data-rating="0"> <span style="width: 100px;" title="Not rated yet!" class="overall_rating"><img title="Not rated yet!" alt="1" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="2" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="3" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="4" src="a_data/star-off.png">&nbsp;<img title="Not rated yet!" alt="5" src="a_data/star-off.png"><input readonly="readonly" name="score" type="hidden"></span></span></strong> Durchschnittliche Bewertung (0 votes)</a></li>
+        </ul>
+      </div> <!-- /.meta -->
+      <div class="tools">
+        <p>
+          <a href="#download-11" data-toggle="modal" class="btn btn-mini">Download</a>
+          <a href="http://beta.dev.geonode.org/maps/new?layer=geonode:boxes_with_dates_bc" class="btn btn-mini">eine Karte erstellen</a>
+        </p>
+      </div>
+    </div> <!-- /.details -->  
+  </div> <!-- /.content -->
+
+  
+  <div class="modal custom hide" id="download-11">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">×</button>
+      <h2><i class="icon-download-alt"></i>  Download Layer "Boxes With Dates Bc"</h2>    
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      
+        
+        
+        <div class="span2 offset1">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_dates_bc&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">JPEG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_dates_bc&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PDF</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms?layers=geonode%3Aboxes_with_dates_bc&amp;width=1276&amp;bbox=-125.0%2C25.0%2C-67.0%2C50.0&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550">PNG</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Aboxes_with_dates_bc&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature">Zipped Shapefile</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_dates_bc&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 2.0</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_dates_bc&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GML 3.1.1</a></li>
+        
+        
+        
+          </ul>
+        </div>
+        <div class="span2">
+          <ul class="unstyled">
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_dates_bc&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">CSV</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_dates_bc&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">Excel</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wfs?typename=geonode%3Aboxes_with_dates_bc&amp;outputFormat=json&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS">GeoJSON</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_dates_bc&amp;mode=download">KML</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/wms/kml?layers=geonode%3Aboxes_with_dates_bc&amp;mode=refresh">View in Google Earth</a></li>
+        
+        
+        
+            <li><a href="http://beta.dev.geonode.org/geoserver/gwc/service/gmaps?layers=geonode:boxes_with_dates_bc&amp;zoom=%7Bz%7D&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;format=image/png8">Tiles</a></li>
+        
+         
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+</article></div>
+
+  
+
+<div class="pagination">
+    <span>results 1-4 of 18</span>
+    <ul class="pager">
+      <li>
+        
+        <span class="disabled prev">Vorherige</span>
+        
+      </li>
+      <li>page <b class="current page">1</b> of <b class="page_total">5</b>
+      </li>
+      <li>
+        
+        <a href="http://beta.dev.geonode.org/layers/?page=3" class="next more">Nächste</a>
+        
+      </li>
+    </ul>   
+</div>
+
+      </div>
+    </div>
+  </div>
+
+    
+
+        </div>
+      </div> <!-- /.container -->
+    </div>
+    
+    
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="pull-left">
+          Angetrieben von <a href="http://geonode.org/">GeoNode</a> <em>Version 2.0c1</em> |
+          <a href="http://beta.dev.geonode.org/developer/">Entwickler</a> |
+          <a href="http://beta.dev.geonode.org/about/">Über</a>
+        </div>
+        <div class="pull-right">
+        
+          
+          <form class="form-inline" action="/i18n/setlang/" method="post">
+          <input name="csrfmiddlewaretoken" value="VNOoX7z4wzASxKAShv4g5Tc385Vs7P3l" type="hidden">
+            <label>Sprache</label>
+            <select class="input span2" name="language" onchange="javascript:form.submit()">
+              
+              <option value="en">
+                English
+              </option>
+              
+              <option value="es">
+                Español
+              </option>
+              
+              <option value="it">
+                Italiano
+              </option>
+              
+              <option value="fr">
+                Français
+              </option>
+              
+              <option value="de" selected="selected">
+                Deutsch
+              </option>
+              
+              <option value="el">
+                Ελληνικά
+              </option>
+              
+              <option value="id">
+                Bahasa Indonesia
+              </option>
+              
+              <option value="zh-cn">
+                中文
+              </option>
+              
+              <option value="ja">
+                日本人
+              </option>
+              
+              <option value="fa">
+                Persian
+              </option>
+              
+              <option value="pt">
+                Portuguese
+              </option>
+              
+              <option value="ru">
+                Russian
+              </option>
+              
+              <option value="vi">
+                Vietnamese
+              </option>
+              
+            </select>
+          </form>
+        
+        </div> <!-- /.pull-right -->
+      </div> <!-- /.container -->
+    </footer>
+    
+    
+    
+    <script src="a_data/assets.js"></script>
+    
+    <script src="a_data/utils.js"></script>
+    <script src="a_data/base.js"></script>
+    <script>
+      $("#search").select2({
+        minimumInputLength: 1,
+        placeholder: 'Search...',
+        width: 'element',     
+        ajax: {
+          url: '/search/api',
+          data: function(term,page){
+            page = (page - 1) * 10;
+            return {
+              type: 'all',
+              limit: 10,
+              sort: 'none',
+              start: page,
+              q: term
+            }
+          },
+          results: function(data, page) {
+            var more = (page * 10) < data.total;
+            return {
+              results: $.map(data.results,function(object){
+                return {id: object.id, text: object.title};
+              }),
+              more: more
+            }
+          }          
+        },
+        createSearchChoice:function(term, data) { if ($(data).filter(function() { return this.text.localeCompare(term)===0; }).length===0) {return {id:term, text:term};} 
+        },
+        formatSelection: function(item){
+          $('#search').val(item.text);
+          $('#search').parent().submit();
+        }
+      });
+    </script>
+
+    
+  <script type="text/javascript">
+  var default_type = 'layer';
+  </script>
+  
+<script src="a_data/global_search.js"></script>
+<script src="a_data/explore.js"></script>
+
+
+
+    <script type="text/javascript" src="a_data/a"></script>
+    <script type="text/javascript" src="a_data/lang.js"></script>
+    <style type="text/css">
+      .select2-drop{
+        color: black;
+      }
+    </style>
+  
+
+</body></html>
