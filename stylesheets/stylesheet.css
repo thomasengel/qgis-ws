@@ -421,3 +421,43 @@ Small Device Styles
   }
 
 }
+
+/* Navigation ------------------------------------------------------------ */
+#navlist
+{
+	padding: 3px 0;
+	margin-left: 0;
+	margin-bottom: 5px;
+
+}
+
+#navlist li
+{
+	list-style: none;
+	margin: 0;
+	display: inline;
+}
+
+#navlist li a
+{
+	padding: 3px 0.5em;
+	margin-left: 3px;
+	border: 1px solid #778;
+	border-bottom: none;
+	background: #DDD;
+	text-decoration: none;
+}
+
+#navlist li a:hover
+{
+	color: #000;
+	background: #f70;
+	border-color: #227;
+}
+
+#navlist li a#current
+{
+	background: white;
+	color: #667;
+	border-bottom: 1px solid white;
+}
